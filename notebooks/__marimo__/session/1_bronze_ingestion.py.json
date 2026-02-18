@@ -1,0 +1,76 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.19.11"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "15cc77a6bf54187e3213668d07ae20ba",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "[JAVA_GATEWAY_EXITED] Java gateway process exited before sending its port number.",
+          "traceback": []
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "/usr/local/lib/python3.11/site-packages/pyspark/bin/load-spark-env.sh: line 68: ps: command not found\n/usr/local/lib/python3.11/site-packages/pyspark/bin/spark-class: line 71: /usr/lib/jvm/java-21-openjdk-arm64/bin/java: No such file or directory\n/usr/local/lib/python3.11/site-packages/pyspark/bin/spark-class: line 97: CMD: bad array subscript\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">&quot;/tmp/marimo_21/__marimo__cell_Hbol_.py&quot;</span>, line <span class=\"m\">7</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"o\">.</span><span class=\"n\">getOrCreate</span><span class=\"p\">()</span>\n<span class=\"w\">     </span><span class=\"pm\">^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/usr/local/lib/python3.11/site-packages/pyspark/sql/session.py&quot;</span>, line <span class=\"m\">497</span>, in <span class=\"n\">getOrCreate</span>\n<span class=\"w\">    </span><span class=\"n\">sc</span> <span class=\"o\">=</span> <span class=\"n\">SparkContext</span><span class=\"o\">.</span><span class=\"n\">getOrCreate</span><span class=\"p\">(</span><span class=\"n\">sparkConf</span><span class=\"p\">)</span>\n<span class=\"w\">         </span><span class=\"pm\">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/usr/local/lib/python3.11/site-packages/pyspark/context.py&quot;</span>, line <span class=\"m\">515</span>, in <span class=\"n\">getOrCreate</span>\n<span class=\"w\">    </span><span class=\"n\">SparkContext</span><span class=\"p\">(</span><span class=\"n\">conf</span><span class=\"o\">=</span><span class=\"n\">conf</span> <span class=\"ow\">or</span> <span class=\"n\">SparkConf</span><span class=\"p\">())</span>\n  File <span class=\"nb\">&quot;/usr/local/lib/python3.11/site-packages/pyspark/context.py&quot;</span>, line <span class=\"m\">201</span>, in <span class=\"n\">__init__</span>\n<span class=\"w\">    </span><span class=\"n\">SparkContext</span><span class=\"o\">.</span><span class=\"n\">_ensure_initialized</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">,</span> <span class=\"n\">gateway</span><span class=\"o\">=</span><span class=\"n\">gateway</span><span class=\"p\">,</span> <span class=\"n\">conf</span><span class=\"o\">=</span><span class=\"n\">conf</span><span class=\"p\">)</span>\n  File <span class=\"nb\">&quot;/usr/local/lib/python3.11/site-packages/pyspark/context.py&quot;</span>, line <span class=\"m\">436</span>, in <span class=\"n\">_ensure_initialized</span>\n<span class=\"w\">    </span><span class=\"n\">SparkContext</span><span class=\"o\">.</span><span class=\"n\">_gateway</span> <span class=\"o\">=</span> <span class=\"n\">gateway</span> <span class=\"ow\">or</span> <span class=\"n\">launch_gateway</span><span class=\"p\">(</span><span class=\"n\">conf</span><span class=\"p\">)</span>\n<span class=\"w\">                                       </span><span class=\"pm\">^^^^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/usr/local/lib/python3.11/site-packages/pyspark/java_gateway.py&quot;</span>, line <span class=\"m\">107</span>, in <span class=\"n\">launch_gateway</span>\n<span class=\"w\">    </span><span class=\"k\">raise</span> <span class=\"n\">PySparkRuntimeError</span><span class=\"p\">(</span>\n<span class=\"gr\">pyspark.errors.exceptions.base.PySparkRuntimeError</span>: <span class=\"n\">[JAVA_GATEWAY_EXITED] Java gateway process exited before sending its port number.</span>\n</pre></div>\n</span>",
+          "mimetype": "application/vnd.marimo+traceback"
+        }
+      ]
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "154452c8a148df71759f4dd227d4ba9c",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "c045b25d1fb0fe8fc9c65139a98ea961",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "53752dd3638669c4772b9c94b5c94c26",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "e424592b3cab86a28311d25c00fdbbba",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "82a388e789334851ebb345c70e14f21a",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "39fa334f7a20b54219693b6d36526b14",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "531673cc57bb5ca334b32fbe0df7330a",
+      "outputs": [],
+      "console": []
+    }
+  ]
+}

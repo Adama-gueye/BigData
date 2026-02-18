@@ -1,0 +1,80 @@
+version: "3.8"
+
+services:
+
+  minio:
+    image: minio/minio:latest
+    container_name: sales_minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    volumes:
+      - minio_data:/data
+    command: server /data --console-address ":9001"
+    networks:
+      - dataplatform
+
+  minio-client:
+    image: minio/mc:latest
+    depends_on:
+      - minio
+    entrypoint: >
+      /bin/sh -c "
+      sleep 5;
+      mc alias set myminio http://minio:9000 minioadmin minioadmin;
+      mc mb myminio/bronze --ignore-existing;
+      mc mb myminio/silver --ignore-existing;
+      mc mb myminio/gold --ignore-existing;
+      mc mb myminio/raw-data --ignore-existing;
+      exit 0;
+      "
+    networks:
+      - dataplatform
+
+  postgres:
+    image: postgres:15
+    container_name: sales_postgres
+    environment:
+      POSTGRES_DB: ecommerce
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - dataplatform
+
+  mongodb:
+    image: mongo:latest
+    container_name: sales_mongodb
+    ports:
+      - "27017:27017"
+    networks:
+      - dataplatform
+
+  marimo-spark:
+    build: .
+    container_name: marimo-spark
+    platform: linux/amd64
+    ports:
+      - "8080:8080"
+      - "4040:4040"
+    volumes:
+      - ./notebooks:/app/notebooks
+    environment:
+      - SPARK_MASTER=local[*]
+      - JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+    command: marimo edit /app/notebooks/1_bronze_ingestion.py --host 0.0.0.0 --port 8080
+    networks:
+      - dataplatform
+
+volumes:
+  minio_data:
+  postgres_data:
+
+networks:
+  dataplatform:
