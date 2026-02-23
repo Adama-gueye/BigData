@@ -6,70 +6,400 @@
   "cells": [
     {
       "id": "Hbol",
-      "code_hash": "15cc77a6bf54187e3213668d07ae20ba",
+      "code_hash": "3c736305504bfa12ca84002cde859c94",
       "outputs": [
         {
-          "type": "error",
-          "ename": "exception",
-          "evalue": "[JAVA_GATEWAY_EXITED] Java gateway process exited before sending its port number.",
-          "traceback": []
+          "type": "data",
+          "data": {
+            "text/html": "\n            <div>\n                <p><b>SparkSession - in-memory</b></p>\n                \n        <div>\n            <p><b>SparkContext</b></p>\n\n            <p><a href=\"http://fb5275b92a1b:4040\">Spark UI</a></p>\n\n            <dl>\n              <dt>Version</dt>\n                <dd><code>v3.5.0</code></dd>\n              <dt>Master</dt>\n                <dd><code>local[*]</code></dd>\n              <dt>AppName</dt>\n                <dd><code>BronzeIngestion</code></dd>\n            </dl>\n        </div>\n        \n            </div>\n        "
+          }
         }
       ],
       "console": [
         {
           "type": "stream",
-          "name": "stderr",
-          "text": "/usr/local/lib/python3.11/site-packages/pyspark/bin/load-spark-env.sh: line 68: ps: command not found\n/usr/local/lib/python3.11/site-packages/pyspark/bin/spark-class: line 71: /usr/lib/jvm/java-21-openjdk-arm64/bin/java: No such file or directory\n/usr/local/lib/python3.11/site-packages/pyspark/bin/spark-class: line 97: CMD: bad array subscript\n",
+          "name": "stdout",
+          "text": ":: loading settings :: url = jar:file:/usr/local/lib/python3.11/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml\n",
           "mimetype": "text/plain"
         },
         {
           "type": "stream",
           "name": "stderr",
-          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">&quot;/tmp/marimo_21/__marimo__cell_Hbol_.py&quot;</span>, line <span class=\"m\">7</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"o\">.</span><span class=\"n\">getOrCreate</span><span class=\"p\">()</span>\n<span class=\"w\">     </span><span class=\"pm\">^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/usr/local/lib/python3.11/site-packages/pyspark/sql/session.py&quot;</span>, line <span class=\"m\">497</span>, in <span class=\"n\">getOrCreate</span>\n<span class=\"w\">    </span><span class=\"n\">sc</span> <span class=\"o\">=</span> <span class=\"n\">SparkContext</span><span class=\"o\">.</span><span class=\"n\">getOrCreate</span><span class=\"p\">(</span><span class=\"n\">sparkConf</span><span class=\"p\">)</span>\n<span class=\"w\">         </span><span class=\"pm\">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/usr/local/lib/python3.11/site-packages/pyspark/context.py&quot;</span>, line <span class=\"m\">515</span>, in <span class=\"n\">getOrCreate</span>\n<span class=\"w\">    </span><span class=\"n\">SparkContext</span><span class=\"p\">(</span><span class=\"n\">conf</span><span class=\"o\">=</span><span class=\"n\">conf</span> <span class=\"ow\">or</span> <span class=\"n\">SparkConf</span><span class=\"p\">())</span>\n  File <span class=\"nb\">&quot;/usr/local/lib/python3.11/site-packages/pyspark/context.py&quot;</span>, line <span class=\"m\">201</span>, in <span class=\"n\">__init__</span>\n<span class=\"w\">    </span><span class=\"n\">SparkContext</span><span class=\"o\">.</span><span class=\"n\">_ensure_initialized</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">,</span> <span class=\"n\">gateway</span><span class=\"o\">=</span><span class=\"n\">gateway</span><span class=\"p\">,</span> <span class=\"n\">conf</span><span class=\"o\">=</span><span class=\"n\">conf</span><span class=\"p\">)</span>\n  File <span class=\"nb\">&quot;/usr/local/lib/python3.11/site-packages/pyspark/context.py&quot;</span>, line <span class=\"m\">436</span>, in <span class=\"n\">_ensure_initialized</span>\n<span class=\"w\">    </span><span class=\"n\">SparkContext</span><span class=\"o\">.</span><span class=\"n\">_gateway</span> <span class=\"o\">=</span> <span class=\"n\">gateway</span> <span class=\"ow\">or</span> <span class=\"n\">launch_gateway</span><span class=\"p\">(</span><span class=\"n\">conf</span><span class=\"p\">)</span>\n<span class=\"w\">                                       </span><span class=\"pm\">^^^^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/usr/local/lib/python3.11/site-packages/pyspark/java_gateway.py&quot;</span>, line <span class=\"m\">107</span>, in <span class=\"n\">launch_gateway</span>\n<span class=\"w\">    </span><span class=\"k\">raise</span> <span class=\"n\">PySparkRuntimeError</span><span class=\"p\">(</span>\n<span class=\"gr\">pyspark.errors.exceptions.base.PySparkRuntimeError</span>: <span class=\"n\">[JAVA_GATEWAY_EXITED] Java gateway process exited before sending its port number.</span>\n</pre></div>\n</span>",
-          "mimetype": "application/vnd.marimo+traceback"
+          "text": "Ivy Default Cache set to: /root/.ivy2/cache\nThe jars for the packages stored in: /root/.ivy2/jars\norg.postgresql#postgresql added as a dependency\norg.apache.hadoop#hadoop-aws added as a dependency\ncom.amazonaws#aws-java-sdk-bundle added as a dependency\norg.mongodb.spark#mongo-spark-connector_2.12 added as a dependency\n:: resolving dependencies :: org.apache.spark#spark-submit-parent-0b4b7a6c-96b2-4f93-95fc-696c6140c1b1;1.0\n\tconfs: [default]\n\tfound org.postgresql#postgresql;42.7.3 in central\n\tfound org.checkerframework#checker-qual;3.42.0 in central\n\tfound org.apache.hadoop#hadoop-aws;3.3.4 in central\n\tfound org.wildfly.openssl#wildfly-openssl;1.0.7.Final in central\n\tfound com.amazonaws#aws-java-sdk-bundle;1.12.540 in central\n\tfound org.mongodb.spark#mongo-spark-connector_2.12;3.0.1 in central\n\tfound org.mongodb#mongodb-driver-sync;4.0.5 in central\n\tfound org.mongodb#bson;4.0.5 in central\n\tfound org.mongodb#mongodb-driver-core;4.0.5 in central\n:: resolution report :: resolve 617ms :: artifacts dl 49ms\n\t:: modules in use:\n\tcom.amazonaws#aws-java-sdk-bundle;1.12.540 from central in [default]\n\torg.apache.hadoop#hadoop-aws;3.3.4 from central in [default]\n\torg.checkerframework#checker-qual;3.42.0 from central in [default]\n\torg.mongodb#bson;4.0.5 from central in [default]\n\torg.mongodb#mongodb-driver-core;4.0.5 from central in [default]\n\torg.mongodb#mongodb-driver-sync;4.0.5 from central in [default]\n\torg.mongodb.spark#mongo-spark-connector_2.12;3.0.1 from central in [default]\n\torg.postgresql#postgresql;42.7.3 from central in [default]\n\torg.wildfly.openssl#wildfly-openssl;1.0.7.Final from central in [default]\n\t:: evicted modules:\n\tcom.amazonaws#aws-java-sdk-bundle;1.12.262 by [com.amazonaws#aws-java-sdk-bundle;1.12.540] in [default]\n\t---------------------------------------------------------------------\n\t|                  |            modules            ||   artifacts   |\n\t|       conf       | number| search|dwnlded|evicted|| number|dwnlded|\n\t---------------------------------------------------------------------\n\t|      default     |   10  |   0   |   0   |   1   ||   9   |   0   |\n\t---------------------------------------------------------------------\n:: retrieving :: org.apache.spark#spark-submit-parent-0b4b7a6c-96b2-4f93-95fc-696c6140c1b1\n\tconfs: [default]\n\t0 artifacts copied, 9 already retrieved (0kB/22ms)\n26/02/23 10:59:32 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable\nSetting default log level to \"WARN\".\nTo adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).\n",
+          "mimetype": "text/plain"
         }
       ]
     },
     {
       "id": "MJUe",
-      "code_hash": "154452c8a148df71759f4dd227d4ba9c",
-      "outputs": [],
-      "console": []
+      "code_hash": "20ef60dc488f8d50378efac6f924ef3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "+--------+-----------+-------+------------+\n|order_id|customer_id| status|total_amount|\n+--------+-----------+-------+------------+\n|       1|         16|   paid|     1908.36|\n|       2|         48|shipped|      938.16|\n|       3|         23|   paid|      400.60|\n|       4|          6|   paid|      257.95|\n|       5|         99|shipped|      977.25|\n+--------+-----------+-------+------------+\nonly showing top 5 rows\n\n",
+          "mimetype": "text/plain"
+        }
+      ]
     },
     {
       "id": "vblA",
-      "code_hash": "c045b25d1fb0fe8fc9c65139a98ea961",
-      "outputs": [],
+      "code_hash": "643b23b4e08f68e4543efd45b025ff08",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "bkHC",
-      "code_hash": "53752dd3638669c4772b9c94b5c94c26",
-      "outputs": [],
+      "code_hash": "2a73c76fe240b4117e47018ccc9688fa",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='bkHC-0' random-id='f8b70736-636b-6926-429f-288a4e31296f'><marimo-table data-initial-value='[]' data-label='null' data-data='[]' data-total-rows='&quot;too_many&quot;' data-total-columns='0' data-max-columns='50' data-banner-text='&quot;Previewing only the first 10 rows.&quot;' data-pagination='false' data-page-size='10' data-show-filters='true' data-show-download='false' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='true' data-preload='false' data-download-file-name='&quot;data&quot;'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "\u26a0\ufe0f Spark MongoDB datasource failed, falling back to pymongo\nAn error occurred while calling o51.load.\n: org.apache.spark.SparkClassNotFoundException: [DATA_SOURCE_NOT_FOUND] Failed to find the data source: mongodb. Please find packages at `https://spark.apache.org/third-party-projects.html`.\n\tat org.apache.spark.sql.errors.QueryExecutionErrors$.dataSourceNotFoundError(QueryExecutionErrors.scala:724)\n\tat org.apache.spark.sql.execution.datasources.DataSource$.lookupDataSource(DataSource.scala:647)\n\tat org.apache.spark.sql.execution.datasources.DataSource$.lookupDataSourceV2(DataSource.scala:697)\n\tat org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:208)\n\tat org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:172)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:75)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:52)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\n\tat py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)\n\tat py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\n\tat py4j.Gateway.invoke(Gateway.java:282)\n\tat py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)\n\tat py4j.commands.CallCommand.execute(CallCommand.java:79)\n\tat py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)\n\tat py4j.ClientServerConnection.run(ClientServerConnection.java:106)\n\tat java.base/java.lang.Thread.run(Thread.java:1583)\nCaused by: java.lang.ClassNotFoundException: mongodb.DefaultSource\n\tat java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)\n\tat java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593)\n\tat java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)\n\tat org.apache.spark.sql.execution.datasources.DataSource$.$anonfun$lookupDataSource$5(DataSource.scala:633)\n\tat scala.util.Try$.apply(Try.scala:213)\n\tat org.apache.spark.sql.execution.datasources.DataSource$.$anonfun$lookupDataSource$4(DataSource.scala:633)\n\tat scala.util.Failure.orElse(Try.scala:224)\n\tat org.apache.spark.sql.execution.datasources.DataSource$.lookupDataSource(DataSource.scala:633)\n\t... 15 more\n\n\u2705 MongoDB loaded via pymongo fallback\n+--------------------+-------+-----------+----------+-------+\n|                 _id| device| event_type|product_id|user_id|\n+--------------------+-------+-----------+----------+-------+\n|6996faa47fbc6f235...|desktop|       view|        10|     61|\n|6996faa47fbc6f235...| mobile|   checkout|        17|     11|\n|6996faa47fbc6f235...|desktop|add_to_cart|        11|     66|\n|6996faa47fbc6f235...| mobile|add_to_cart|         1|     39|\n|6996faa47fbc6f235...| mobile|add_to_cart|        41|     57|\n+--------------------+-------+-----------+----------+-------+\nonly showing top 5 rows\n\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "VLTE",
+      "code_hash": "7f4a17c749c32133a2d5633cad7e9eca",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "lEQa",
-      "code_hash": "e424592b3cab86a28311d25c00fdbbba",
-      "outputs": [],
-      "console": []
+      "code_hash": "3f9d70809151a65af7afe058f2463118",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "+--------+-----------+-------+------------+\n|order_id|customer_id| status|total_amount|\n+--------+-----------+-------+------------+\n|       1|         16|   paid|     1908.36|\n|       2|         48|shipped|      938.16|\n|       3|         23|   paid|       400.6|\n|       4|          6|   paid|      257.95|\n|       5|         99|shipped|      977.25|\n+--------+-----------+-------+------------+\nonly showing top 5 rows\n\n",
+          "mimetype": "text/plain"
+        }
+      ]
     },
     {
       "id": "PKri",
       "code_hash": "82a388e789334851ebb345c70e14f21a",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "Xref",
       "code_hash": "39fa334f7a20b54219693b6d36526b14",
-      "outputs": [],
-      "console": []
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "+--------+-----+\n|currency| rate|\n+--------+-----+\n|     EUR| 0.92|\n|     USD|  1.0|\n|     XOF|610.0|\n+--------+-----+\n\n",
+          "mimetype": "text/plain"
+        }
+      ]
     },
     {
       "id": "SFPL",
       "code_hash": "531673cc57bb5ca334b32fbe0df7330a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Edyd",
+      "code_hash": "8bb44c7f817ccab1ca6fb6fd377a08e2",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"silver-orders-postgresql\">Silver \u2013 Orders (PostgreSQL)</h3></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "DUdd",
+      "code_hash": "2f668a605a82281d9a8dc76f631ef2f2",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Wmud",
+      "code_hash": "58227dcee15367b20c3464351e7dbc28",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"silver-events-mongodb\">Silver \u2013 Events (MongoDB)</h3></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vpXC",
+      "code_hash": "dc382076ba95417c51165ed219ce8c2f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "tCrR",
+      "code_hash": "52ad23edd4b757e0c81619e568b7d551",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"silver-exchange-rates-api\">Silver \u2013 Exchange Rates (API)</h3></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "NIhm",
+      "code_hash": "e3b5ed221c44c71890de84b3d8277e8d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "yija",
+      "code_hash": "fee7cc1de28ba5fa7ab2d560e0408945",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"silver-files-csv-ventes\">SILVER \u2013 FILES (CSV ventes)</h3></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "QSLC",
+      "code_hash": "f0d2338edb8a69506e1505b33105264c",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'col' was defined by another cell",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "DZeH",
+      "code_hash": "acb56133f26205d1cd6b4ee734177121",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"gold-chiffre-daffaires-par-statut\">Gold \u2013 Chiffre d\u2019affaires par statut</h3></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "HrJk",
+      "code_hash": "7567205a3d76d79fa7228357441d4d1b",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "JfEK",
+      "code_hash": "6f7bde4b4b28d6f378276b8866f9221a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"gold-top-clients\">Gold \u2013 Top clients</h3></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bgje",
+      "code_hash": "70eed9555536f9c0fde66a70af278fba",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PYVu",
+      "code_hash": "a095ef69006c404b49bbcc8736e0bcd2",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"gold-events-par-type\">Gold \u2013 Events par type</h3></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SUbX",
+      "code_hash": "eaa1d375f807d4fb812fc076c9996263",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "mVDh",
+      "code_hash": "5dec4dc929403d4b771f73dbc36066da",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"gold-top-clients-fichiers\">Gold \u2013 Top clients (fichiers)</h3></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZVpd",
+      "code_hash": "2d2b077254bf871cb5195d81c4956443",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'col' was defined by another cell",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "wjfI",
+      "code_hash": "2424ac3bd62dfa2dd06f4481b50a8d4c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"gold-chiffre-daffaires-issu-des-fichiers\">Gold \u2013 Chiffre d\u2019affaires issu des fichiers</h3></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "OODY",
+      "code_hash": null,
       "outputs": [],
+      "console": []
+    },
+    {
+      "id": "yVRZ",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     }
   ]
