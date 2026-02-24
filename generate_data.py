@@ -133,28 +133,22 @@ for _ in range(500):
 
 events_col.insert_many(events)
 
-df_sales = pd.DataFrame(orders)
-csv_buffer = BytesIO()
-df_sales.to_csv(csv_buffer, index=False)
-csv_buffer.seek(0)
+from pathlib import Path
 
-minio_client.put_object(
-    "raw-data",
-    "sales/sales_2024.csv",
-    csv_buffer,
-    length=len(csv_buffer.getvalue()),
-    content_type="text/csv"
-)
+kaggle_file = Path("data/kaggle/online_retail.csv")
 
-df_products_ext = pd.DataFrame(products)
-csv_buffer = BytesIO()
-df_products_ext.to_csv(csv_buffer, index=False)
-csv_buffer.seek(0)
+if not kaggle_file.exists():
+    raise FileNotFoundError("Kaggle CSV not found")
 
-minio_client.put_object(
-    "raw-data",
-    "products/products_external.csv",
-    csv_buffer,
-    length=len(csv_buffer.getvalue()),
-    content_type="text/csv"
-)
+with open(kaggle_file, "rb") as f:
+    minio_client.put_object(
+        bucket_name="raw-data",
+        object_name="files/online_retail.csv",
+        data=f,
+        length=-1,
+        part_size=10 * 1024 * 1024,
+        content_type="text/csv"
+    )
+
+print("Dataset Kaggle chargé dans MinIO : raw-data/files/online_retail.csv")
+
