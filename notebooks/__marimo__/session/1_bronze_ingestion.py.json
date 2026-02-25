@@ -124,86 +124,304 @@
     {
       "id": "Hbol",
       "code_hash": "c0c664198a6e57908c13646beec8dee9",
-      "outputs": [],
-      "console": []
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "\n            <div>\n                <p><b>SparkSession - in-memory</b></p>\n                \n        <div>\n            <p><b>SparkContext</b></p>\n\n            <p><a href=\"http://2183048bd53c:4040\">Spark UI</a></p>\n\n            <dl>\n              <dt>Version</dt>\n                <dd><code>v3.5.0</code></dd>\n              <dt>Master</dt>\n                <dd><code>local[*]</code></dd>\n              <dt>AppName</dt>\n                <dd><code>BronzeIngestion</code></dd>\n            </dl>\n        </div>\n        \n            </div>\n        "
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": ":: loading settings :: url = jar:file:/usr/local/lib/python3.11/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "Ivy Default Cache set to: /root/.ivy2/cache\nThe jars for the packages stored in: /root/.ivy2/jars\norg.postgresql#postgresql added as a dependency\norg.apache.hadoop#hadoop-aws added as a dependency\ncom.amazonaws#aws-java-sdk-bundle added as a dependency\norg.mongodb.spark#mongo-spark-connector_2.12 added as a dependency\n:: resolving dependencies :: org.apache.spark#spark-submit-parent-3fad0989-baea-4f1b-a0c0-4fa5d1e3bb11;1.0\n\tconfs: [default]\n\tfound org.postgresql#postgresql;42.7.3 in central\n\tfound org.checkerframework#checker-qual;3.42.0 in central\n\tfound org.apache.hadoop#hadoop-aws;3.3.4 in central\n\tfound org.wildfly.openssl#wildfly-openssl;1.0.7.Final in central\n\tfound com.amazonaws#aws-java-sdk-bundle;1.12.540 in central\n\tfound org.mongodb.spark#mongo-spark-connector_2.12;3.0.1 in central\n\tfound org.mongodb#mongodb-driver-sync;4.0.5 in central\n\tfound org.mongodb#bson;4.0.5 in central\n\tfound org.mongodb#mongodb-driver-core;4.0.5 in central\n:: resolution report :: resolve 686ms :: artifacts dl 43ms\n\t:: modules in use:\n\tcom.amazonaws#aws-java-sdk-bundle;1.12.540 from central in [default]\n\torg.apache.hadoop#hadoop-aws;3.3.4 from central in [default]\n\torg.checkerframework#checker-qual;3.42.0 from central in [default]\n\torg.mongodb#bson;4.0.5 from central in [default]\n\torg.mongodb#mongodb-driver-core;4.0.5 from central in [default]\n\torg.mongodb#mongodb-driver-sync;4.0.5 from central in [default]\n\torg.mongodb.spark#mongo-spark-connector_2.12;3.0.1 from central in [default]\n\torg.postgresql#postgresql;42.7.3 from central in [default]\n\torg.wildfly.openssl#wildfly-openssl;1.0.7.Final from central in [default]\n\t:: evicted modules:\n\tcom.amazonaws#aws-java-sdk-bundle;1.12.262 by [com.amazonaws#aws-java-sdk-bundle;1.12.540] in [default]\n\t---------------------------------------------------------------------\n\t|                  |            modules            ||   artifacts   |\n\t|       conf       | number| search|dwnlded|evicted|| number|dwnlded|\n\t---------------------------------------------------------------------\n\t|      default     |   10  |   0   |   0   |   1   ||   9   |   0   |\n\t---------------------------------------------------------------------\n:: retrieving :: org.apache.spark#spark-submit-parent-3fad0989-baea-4f1b-a0c0-4fa5d1e3bb11\n\tconfs: [default]\n\t0 artifacts copied, 9 already retrieved (0kB/20ms)\n26/02/24 13:44:29 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable\nSetting default log level to \"WARN\".\nTo adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).\n",
+          "mimetype": "text/plain"
+        }
+      ]
     },
     {
       "id": "MJUe",
       "code_hash": "20ef60dc488f8d50378efac6f924ef3e",
-      "outputs": [],
-      "console": []
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "26/02/24 13:44:56 WARN GarbageCollectionMetrics: To enable non-built-in garbage collector(s) List(G1 Concurrent GC), users should configure it(them) to spark.eventLog.gcMetrics.youngGenerationGarbageCollectors or spark.eventLog.gcMetrics.oldGenerationGarbageCollectors\n\r[Stage 0:>                                                          (0 + 1) / 1]\r\r                                                                                \r",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "+--------+-----------+-------+------------+\n|order_id|customer_id| status|total_amount|\n+--------+-----------+-------+------------+\n|       1|         94|shipped|       97.88|\n|       2|         32|   paid|      641.60|\n|       3|         88|   paid|      775.60|\n|       4|         90|   paid|     2364.85|\n|       5|          8|shipped|     1598.64|\n+--------+-----------+-------+------------+\nonly showing top 5 rows\n\n",
+          "mimetype": "text/plain"
+        }
+      ]
     },
     {
       "id": "vblA",
       "code_hash": "643b23b4e08f68e4543efd45b025ff08",
-      "outputs": [],
-      "console": []
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "26/02/24 13:45:05 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties\n\r[Stage 1:>                                                          (0 + 1) / 1]\r\r                                                                                \r",
+          "mimetype": "text/plain"
+        }
+      ]
     },
     {
       "id": "bkHC",
       "code_hash": "0f530d1ff2cef5c78612b0ff9a317981",
-      "outputs": [],
-      "console": []
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='bkHC-0' random-id='64f1c25a-11ed-d424-e29d-2034cd1a1a5b'><marimo-table data-initial-value='[]' data-label='null' data-data='[]' data-total-rows='&quot;too_many&quot;' data-total-columns='0' data-max-columns='50' data-banner-text='&quot;Previewing only the first 10 rows.&quot;' data-pagination='false' data-page-size='10' data-show-filters='true' data-show-download='false' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='true' data-preload='false' data-download-file-name='&quot;data&quot;'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "\u00c9chec du connecteur Spark MongoDB, bascule vers pymongo\nAn error occurred while calling o51.load.\n: org.apache.spark.SparkClassNotFoundException: [DATA_SOURCE_NOT_FOUND] Failed to find the data source: mongodb. Please find packages at `https://spark.apache.org/third-party-projects.html`.\n\tat org.apache.spark.sql.errors.QueryExecutionErrors$.dataSourceNotFoundError(QueryExecutionErrors.scala:724)\n\tat org.apache.spark.sql.execution.datasources.DataSource$.lookupDataSource(DataSource.scala:647)\n\tat org.apache.spark.sql.execution.datasources.DataSource$.lookupDataSourceV2(DataSource.scala:697)\n\tat org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:208)\n\tat org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:172)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:75)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:52)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\n\tat py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)\n\tat py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)\n\tat py4j.Gateway.invoke(Gateway.java:282)\n\tat py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)\n\tat py4j.commands.CallCommand.execute(CallCommand.java:79)\n\tat py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)\n\tat py4j.ClientServerConnection.run(ClientServerConnection.java:106)\n\tat java.base/java.lang.Thread.run(Thread.java:1583)\nCaused by: java.lang.ClassNotFoundException: mongodb.DefaultSource\n\tat java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)\n\tat java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593)\n\tat java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)\n\tat org.apache.spark.sql.execution.datasources.DataSource$.$anonfun$lookupDataSource$5(DataSource.scala:633)\n\tat scala.util.Try$.apply(Try.scala:213)\n\tat org.apache.spark.sql.execution.datasources.DataSource$.$anonfun$lookupDataSource$4(DataSource.scala:633)\n\tat scala.util.Failure.orElse(Try.scala:224)\n\tat org.apache.spark.sql.execution.datasources.DataSource$.lookupDataSource(DataSource.scala:633)\n\t... 15 more\n\nDonn\u00e9es MongoDB charg\u00e9es via pymongo (solution de secours)\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "\r[Stage 2:>                                                          (0 + 1) / 1]\r\r                                                                                \r",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "+--------------------+-------+-----------+----------+-------+\n|                 _id| device| event_type|product_id|user_id|\n+--------------------+-------+-----------+----------+-------+\n|699d99ead7b1dde7b...| mobile|add_to_cart|        15|     20|\n|699d99ead7b1dde7b...|desktop|   checkout|        14|     91|\n|699d99ead7b1dde7b...| mobile|       view|        16|     62|\n|699d99ead7b1dde7b...|desktop|add_to_cart|        37|     58|\n|699d99ead7b1dde7b...| mobile|       view|        27|     90|\n+--------------------+-------+-----------+----------+-------+\nonly showing top 5 rows\n\n",
+          "mimetype": "text/plain"
+        }
+      ]
     },
     {
       "id": "lEQa",
       "code_hash": "7f4a17c749c32133a2d5633cad7e9eca",
-      "outputs": [],
-      "console": []
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "\r[Stage 3:>                                                        (0 + 12) / 12]\r\r[Stage 3:====>                                                    (1 + 11) / 12]\r\r[Stage 3:===================>                                      (4 + 8) / 12]\r\r[Stage 3:======================================>                   (8 + 4) / 12]\r\r                                                                                \r",
+          "mimetype": "text/plain"
+        }
+      ]
     },
     {
       "id": "PKri",
       "code_hash": "71eafc5979ded6885e5fb696364807a0",
-      "outputs": [],
-      "console": []
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "\r[Stage 5:>                                                        (0 + 12) / 12]\r\r[Stage 5:====>                                                    (1 + 11) / 12]\r\r[Stage 5:========================>                                 (5 + 7) / 12]\r\r                                                                                \r",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "+---------+---------+--------------------+--------+-------------------+---------+----------+--------------+\n|InvoiceNo|StockCode|         Description|Quantity|        InvoiceDate|UnitPrice|CustomerID|       Country|\n+---------+---------+--------------------+--------+-------------------+---------+----------+--------------+\n|   536365|   85123A|WHITE HANGING HEA...|       6|2010-12-01 08:26:00|     2.55|   17850.0|United Kingdom|\n|   536365|    71053| WHITE METAL LANTERN|       6|2010-12-01 08:26:00|     3.39|   17850.0|United Kingdom|\n|   536365|   84406B|CREAM CUPID HEART...|       8|2010-12-01 08:26:00|     2.75|   17850.0|United Kingdom|\n|   536365|   84029G|KNITTED UNION FLA...|       6|2010-12-01 08:26:00|     3.39|   17850.0|United Kingdom|\n|   536365|   84029E|RED WOOLLY HOTTIE...|       6|2010-12-01 08:26:00|     3.39|   17850.0|United Kingdom|\n+---------+---------+--------------------+--------+-------------------+---------+----------+--------------+\nonly showing top 5 rows\n\n",
+          "mimetype": "text/plain"
+        }
+      ]
     },
     {
       "id": "Xref",
       "code_hash": "112d5800380a2457d224cd66ee54bb1a",
-      "outputs": [],
-      "console": []
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "26/02/24 13:45:38 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 95.00% for 8 writers\n26/02/24 13:45:38 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 84.44% for 9 writers\n26/02/24 13:45:38 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 76.00% for 10 writers\n26/02/24 13:45:38 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 69.09% for 11 writers\n26/02/24 13:45:38 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 63.33% for 12 writers\n\r[Stage 7:>                                                        (0 + 12) / 12]\r26/02/24 13:45:38 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 69.09% for 11 writers\n\r[Stage 7:====>                                                    (1 + 11) / 12]\r26/02/24 13:45:40 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 76.00% for 10 writers\n26/02/24 13:45:40 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 84.44% for 9 writers\n26/02/24 13:45:40 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 95.00% for 8 writers\n\r[Stage 7:===================>                                      (4 + 8) / 12]\r\r[Stage 7:====================================================>    (11 + 1) / 12]\r\r                                                                                \r",
+          "mimetype": "text/plain"
+        }
+      ]
     },
     {
       "id": "SFPL",
       "code_hash": "48fdf7d1a9e820ec1cace5d8e8d0697c",
-      "outputs": [],
-      "console": []
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "\r[Stage 9:============================================>              (3 + 1) / 4]\r\r                                                                                \r\r[Stage 10:=========================================>                (5 + 2) / 7]\r\r                                                                                \r",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "+--------+-----+\n|currency| rate|\n+--------+-----+\n|     EUR| 0.92|\n|     USD|  1.0|\n|     XOF|610.0|\n+--------+-----+\n\n",
+          "mimetype": "text/plain"
+        }
+      ]
     },
     {
       "id": "BYtC",
       "code_hash": "531673cc57bb5ca334b32fbe0df7330a",
-      "outputs": [],
-      "console": []
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "\r[Stage 11:====>                                                   (1 + 11) / 12]\r\r[Stage 11:==============>                                          (3 + 9) / 12]\r\r[Stage 11:===================================================>    (11 + 1) / 12]\r\r                                                                                \r",
+          "mimetype": "text/plain"
+        }
+      ]
     },
     {
       "id": "Kclp",
       "code_hash": "5d82ff19c5faf0550ff1a5fd426e9b1b",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "Hstk",
       "code_hash": "5864e393d9508a6f28f7f1ff93796572",
-      "outputs": [],
-      "console": []
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "26/02/24 13:51:30 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 95.00% for 8 writers\n26/02/24 13:51:30 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 84.44% for 9 writers\n26/02/24 13:51:30 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 76.00% for 10 writers\n26/02/24 13:51:30 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 69.09% for 11 writers\n26/02/24 13:51:30 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 63.33% for 12 writers\n26/02/24 13:51:30 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 69.09% for 11 writers\n26/02/24 13:51:30 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 76.00% for 10 writers\n26/02/24 13:51:30 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 84.44% for 9 writers\n26/02/24 13:51:30 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 95.00% for 8 writers\n\r[Stage 15:>                                                       (0 + 12) / 12]\r\r                                                                                \r",
+          "mimetype": "text/plain"
+        }
+      ]
     },
     {
       "id": "iLit",
       "code_hash": "214f8a3cd74d089df38ec0fcb29333ac",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "ROlb",
       "code_hash": "d92d1c7017312a82a13009a943e6defe",
-      "outputs": [],
-      "console": []
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "[UNRESOLVED_COLUMN.WITH_SUGGESTION] A column or function parameter with name `order_id` cannot be resolved. Did you mean one of the following? [`Country`, `Quantity`, `CustomerID`, `InvoiceNo`, `StockCode`].;\n'Project [InvoiceNo#242, StockCode#243, Description#244, Quantity#245, InvoiceDate#246, UnitPrice#247, CustomerID#248, Country#249, cast('order_id as int) AS order_id#258]\n+- Relation [InvoiceNo#242,StockCode#243,Description#244,Quantity#245,InvoiceDate#246,UnitPrice#247,CustomerID#248,Country#249] parquet\n",
+          "traceback": []
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">&quot;/tmp/marimo_1195/__marimo__cell_ROlb_.py&quot;</span>, line <span class=\"m\">6</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"o\">.</span><span class=\"n\">withColumn</span><span class=\"p\">(</span><span class=\"s2\">&quot;order_id&quot;</span><span class=\"p\">,</span> <span class=\"n\">col</span><span class=\"p\">(</span><span class=\"s2\">&quot;order_id&quot;</span><span class=\"p\">)</span><span class=\"o\">.</span><span class=\"n\">cast</span><span class=\"p\">(</span><span class=\"s2\">&quot;int&quot;</span><span class=\"p\">))</span> \\\n<span class=\"w\">     </span><span class=\"pm\">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/usr/local/lib/python3.11/site-packages/pyspark/sql/dataframe.py&quot;</span>, line <span class=\"m\">5170</span>, in <span class=\"n\">withColumn</span>\n<span class=\"w\">    </span><span class=\"k\">return</span> <span class=\"n\">DataFrame</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">_jdf</span><span class=\"o\">.</span><span class=\"n\">withColumn</span><span class=\"p\">(</span><span class=\"n\">colName</span><span class=\"p\">,</span> <span class=\"n\">col</span><span class=\"o\">.</span><span class=\"n\">_jc</span><span class=\"p\">),</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">sparkSession</span><span class=\"p\">)</span>\n<span class=\"w\">                     </span><span class=\"pm\">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/usr/local/lib/python3.11/site-packages/py4j/java_gateway.py&quot;</span>, line <span class=\"m\">1322</span>, in <span class=\"n\">__call__</span>\n<span class=\"w\">    </span><span class=\"n\">return_value</span> <span class=\"o\">=</span> <span class=\"n\">get_return_value</span><span class=\"p\">(</span>\n<span class=\"w\">                   </span><span class=\"pm\">^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/usr/local/lib/python3.11/site-packages/pyspark/errors/exceptions/captured.py&quot;</span>, line <span class=\"m\">185</span>, in <span class=\"n\">deco</span>\n<span class=\"w\">    </span><span class=\"k\">raise</span> <span class=\"n\">converted</span> <span class=\"kn\">from</span><span class=\"w\"> </span><span class=\"kc\">None</span>\n<span class=\"gr\">pyspark.errors.exceptions.captured.AnalysisException</span>: <span class=\"n\">[UNRESOLVED_COLUMN.WITH_SUGGESTION] A column or function parameter with name `order_id` cannot be resolved. Did you mean one of the following? [`Country`, `Quantity`, `CustomerID`, `InvoiceNo`, `StockCode`].;</span>\n<span class=\"x\">&#39;Project [InvoiceNo#242, StockCode#243, Description#244, Quantity#245, InvoiceDate#246, UnitPrice#247, CustomerID#248, Country#249, cast(&#39;order_id as int) AS order_id#258]</span>\n<span class=\"x\">+- Relation [InvoiceNo#242,StockCode#243,Description#244,Quantity#245,InvoiceDate#246,UnitPrice#247,CustomerID#248,Country#249] parquet</span>\n</pre></div>\n</span>",
+          "mimetype": "application/vnd.marimo+traceback"
+        }
+      ]
     },
     {
       "id": "TqIu",
       "code_hash": "cdd8805b617d56ba76c408a8eb6b842c",
-      "outputs": [],
-      "console": []
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "name '_sum' is not defined",
+          "traceback": []
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">&quot;/tmp/marimo_1195/__marimo__cell_TqIu_.py&quot;</span>, line <span class=\"m\">7</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"o\">.</span><span class=\"n\">agg</span><span class=\"p\">(</span><span class=\"n\">_sum</span><span class=\"p\">(</span><span class=\"s2\">&quot;amount&quot;</span><span class=\"p\">)</span><span class=\"o\">.</span><span class=\"n\">alias</span><span class=\"p\">(</span><span class=\"s2\">&quot;total_</span><span class=\"si\">%r</span><span class=\"s2\">evenue&quot;</span><span class=\"p\">))</span>\n<span class=\"w\">         </span><span class=\"pm\">^^^^</span>\n<span class=\"gr\">NameError</span>: <span class=\"n\">name &#39;_sum&#39; is not defined</span>\n</pre></div>\n</span>",
+          "mimetype": "application/vnd.marimo+traceback"
+        }
+      ]
     },
     {
       "id": "DnEU",

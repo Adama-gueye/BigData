@@ -56,7 +56,6 @@ def _(spark):
 
 @app.cell
 def _(df_orders):
-
     df_orders.write.mode("overwrite").parquet(
         "s3a://bronze/postgres/orders"
     )
@@ -254,10 +253,15 @@ def _(col, spark):
     )
 
     files_silver = files_silver \
-        .withColumn("order_id", col("order_id").cast("int")) \
-        .withColumn("customer_id", col("customer_id").cast("int")) \
-        .withColumn("total_amount", col("total_amount").cast("double")) \
-        .filter(col("total_amount").isNotNull())
+        .withColumnRenamed("InvoiceNo", "order_id") \
+        .withColumnRenamed("CustomerID", "customer_id") \
+        .withColumn("quantity", col("Quantity").cast("int")) \
+        .withColumn("unit_price", col("UnitPrice").cast("double")) \
+        .withColumn(
+            "total_amount",
+            col("quantity") * col("unit_price")
+        ) \
+        .filter(col("customer_id").isNotNull())
 
     files_silver.write.mode("overwrite").parquet(
         "s3a://silver/files_online_retails"
@@ -275,6 +279,7 @@ def _(mo):
 
 @app.cell
 def _(spark):
+    from pyspark.sql.functions import sum as _sum
     orders_gold = spark.read.parquet(
         "s3a://silver/orders"
     )
@@ -299,6 +304,8 @@ def _(mo):
 
 @app.cell
 def _(col, orders_gold):
+    from pyspark.sql.functions import sum as _sum
+
     top_clients = orders_gold \
         .groupBy("customer_id") \
         .agg(_sum("amount").alias("total_spent")) \
@@ -344,12 +351,13 @@ def _(mo):
 
 @app.cell
 def _(spark):
+    from pyspark.sql.functions import sum as _sum
     files_gold_revenue = spark.read.parquet(
         "s3a://silver/files_online_retails"
     )
 
     files_revenue = files_gold_revenue \
-        .agg(sum("total_amount").alias("total_revenue_files"))
+        .agg(_sum("total_amount").alias("total_revenue_files"))
 
     files_revenue.write.mode("overwrite").parquet(
         "s3a://gold/revenue_from_files"
@@ -367,9 +375,10 @@ def _(mo):
 
 @app.cell
 def _(col, files_gold_revenue):
+    from pyspark.sql.functions import sum as _sum
     files_top_clients = files_gold_revenue \
         .groupBy("customer_id") \
-        .agg(sum("total_amount").alias("total_spent")) \
+        .agg(_sum("total_amount").alias("total_spent")) \
         .orderBy(col("total_spent").desc())
 
     files_top_clients.write.mode("overwrite").parquet(
