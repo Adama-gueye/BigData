@@ -67,7 +67,7 @@ services:
       - ./notebooks:/app/notebooks
     environment:
       - SPARK_MASTER=local[*]
-      - JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+      - JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
     command: marimo edit /app/notebooks/1_bronze_ingestion.py --host 0.0.0.0 --port 8080
     networks:
       - dataplatform
