@@ -5,130 +5,13 @@
   },
   "cells": [
     {
-      "id": "RGSE",
-      "code_hash": "8bb44c7f817ccab1ca6fb6fd377a08e2",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"silver-orders-postgresql\">Silver \u2013 Orders (PostgreSQL)</h3></span>"
-          }
-        }
-      ],
-      "console": []
-    },
-    {
-      "id": "emfo",
-      "code_hash": "58227dcee15367b20c3464351e7dbc28",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"silver-events-mongodb\">Silver \u2013 Events (MongoDB)</h3></span>"
-          }
-        }
-      ],
-      "console": []
-    },
-    {
-      "id": "nWHF",
-      "code_hash": "52ad23edd4b757e0c81619e568b7d551",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"silver-exchange-rates-api\">Silver \u2013 Exchange Rates (API)</h3></span>"
-          }
-        }
-      ],
-      "console": []
-    },
-    {
-      "id": "ZHCJ",
-      "code_hash": "fee7cc1de28ba5fa7ab2d560e0408945",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"silver-files-csv-ventes\">SILVER \u2013 FILES (CSV ventes)</h3></span>"
-          }
-        }
-      ],
-      "console": []
-    },
-    {
-      "id": "qnkX",
-      "code_hash": "acb56133f26205d1cd6b4ee734177121",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"gold-chiffre-daffaires-par-statut\">Gold \u2013 Chiffre d\u2019affaires par statut</h3></span>"
-          }
-        }
-      ],
-      "console": []
-    },
-    {
-      "id": "Vxnm",
-      "code_hash": "6f7bde4b4b28d6f378276b8866f9221a",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"gold-top-clients\">Gold \u2013 Top clients</h3></span>"
-          }
-        }
-      ],
-      "console": []
-    },
-    {
-      "id": "ulZA",
-      "code_hash": "a095ef69006c404b49bbcc8736e0bcd2",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"gold-events-par-type\">Gold \u2013 Events par type</h3></span>"
-          }
-        }
-      ],
-      "console": []
-    },
-    {
-      "id": "Pvdt",
-      "code_hash": "2424ac3bd62dfa2dd06f4481b50a8d4c",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"gold-chiffre-daffaires-issu-des-fichiers\">Gold \u2013 Chiffre d\u2019affaires issu des fichiers</h3></span>"
-          }
-        }
-      ],
-      "console": []
-    },
-    {
-      "id": "aLJB",
-      "code_hash": "5dec4dc929403d4b771f73dbc36066da",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"gold-top-clients-fichiers\">Gold \u2013 Top clients (fichiers)</h3></span>"
-          }
-        }
-      ],
-      "console": []
-    },
-    {
       "id": "Hbol",
       "code_hash": "c0c664198a6e57908c13646beec8dee9",
       "outputs": [
         {
           "type": "data",
           "data": {
-            "text/html": "\n            <div>\n                <p><b>SparkSession - in-memory</b></p>\n                \n        <div>\n            <p><b>SparkContext</b></p>\n\n            <p><a href=\"http://2183048bd53c:4040\">Spark UI</a></p>\n\n            <dl>\n              <dt>Version</dt>\n                <dd><code>v3.5.0</code></dd>\n              <dt>Master</dt>\n                <dd><code>local[*]</code></dd>\n              <dt>AppName</dt>\n                <dd><code>BronzeIngestion</code></dd>\n            </dl>\n        </div>\n        \n            </div>\n        "
+            "text/html": "\n            <div>\n                <p><b>SparkSession - in-memory</b></p>\n                \n        <div>\n            <p><b>SparkContext</b></p>\n\n            <p><a href=\"http://9b531189d0b2:4040\">Spark UI</a></p>\n\n            <dl>\n              <dt>Version</dt>\n                <dd><code>v3.5.0</code></dd>\n              <dt>Master</dt>\n                <dd><code>local[*]</code></dd>\n              <dt>AppName</dt>\n                <dd><code>BronzeIngestion</code></dd>\n            </dl>\n        </div>\n        \n            </div>\n        "
           }
         }
       ],
@@ -142,7 +25,7 @@
         {
           "type": "stream",
           "name": "stderr",
-          "text": "Ivy Default Cache set to: /root/.ivy2/cache\nThe jars for the packages stored in: /root/.ivy2/jars\norg.postgresql#postgresql added as a dependency\norg.apache.hadoop#hadoop-aws added as a dependency\ncom.amazonaws#aws-java-sdk-bundle added as a dependency\norg.mongodb.spark#mongo-spark-connector_2.12 added as a dependency\n:: resolving dependencies :: org.apache.spark#spark-submit-parent-3fad0989-baea-4f1b-a0c0-4fa5d1e3bb11;1.0\n\tconfs: [default]\n\tfound org.postgresql#postgresql;42.7.3 in central\n\tfound org.checkerframework#checker-qual;3.42.0 in central\n\tfound org.apache.hadoop#hadoop-aws;3.3.4 in central\n\tfound org.wildfly.openssl#wildfly-openssl;1.0.7.Final in central\n\tfound com.amazonaws#aws-java-sdk-bundle;1.12.540 in central\n\tfound org.mongodb.spark#mongo-spark-connector_2.12;3.0.1 in central\n\tfound org.mongodb#mongodb-driver-sync;4.0.5 in central\n\tfound org.mongodb#bson;4.0.5 in central\n\tfound org.mongodb#mongodb-driver-core;4.0.5 in central\n:: resolution report :: resolve 686ms :: artifacts dl 43ms\n\t:: modules in use:\n\tcom.amazonaws#aws-java-sdk-bundle;1.12.540 from central in [default]\n\torg.apache.hadoop#hadoop-aws;3.3.4 from central in [default]\n\torg.checkerframework#checker-qual;3.42.0 from central in [default]\n\torg.mongodb#bson;4.0.5 from central in [default]\n\torg.mongodb#mongodb-driver-core;4.0.5 from central in [default]\n\torg.mongodb#mongodb-driver-sync;4.0.5 from central in [default]\n\torg.mongodb.spark#mongo-spark-connector_2.12;3.0.1 from central in [default]\n\torg.postgresql#postgresql;42.7.3 from central in [default]\n\torg.wildfly.openssl#wildfly-openssl;1.0.7.Final from central in [default]\n\t:: evicted modules:\n\tcom.amazonaws#aws-java-sdk-bundle;1.12.262 by [com.amazonaws#aws-java-sdk-bundle;1.12.540] in [default]\n\t---------------------------------------------------------------------\n\t|                  |            modules            ||   artifacts   |\n\t|       conf       | number| search|dwnlded|evicted|| number|dwnlded|\n\t---------------------------------------------------------------------\n\t|      default     |   10  |   0   |   0   |   1   ||   9   |   0   |\n\t---------------------------------------------------------------------\n:: retrieving :: org.apache.spark#spark-submit-parent-3fad0989-baea-4f1b-a0c0-4fa5d1e3bb11\n\tconfs: [default]\n\t0 artifacts copied, 9 already retrieved (0kB/20ms)\n26/02/24 13:44:29 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable\nSetting default log level to \"WARN\".\nTo adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).\n",
+          "text": "Ivy Default Cache set to: /root/.ivy2/cache\nThe jars for the packages stored in: /root/.ivy2/jars\norg.postgresql#postgresql added as a dependency\norg.apache.hadoop#hadoop-aws added as a dependency\ncom.amazonaws#aws-java-sdk-bundle added as a dependency\norg.mongodb.spark#mongo-spark-connector_2.12 added as a dependency\n:: resolving dependencies :: org.apache.spark#spark-submit-parent-f73ca8af-bd06-475b-b86f-42d428373af6;1.0\n\tconfs: [default]\n\tfound org.postgresql#postgresql;42.7.3 in central\n\tfound org.checkerframework#checker-qual;3.42.0 in central\n\tfound org.apache.hadoop#hadoop-aws;3.3.4 in central\n\tfound org.wildfly.openssl#wildfly-openssl;1.0.7.Final in central\n\tfound com.amazonaws#aws-java-sdk-bundle;1.12.540 in central\n\tfound org.mongodb.spark#mongo-spark-connector_2.12;3.0.1 in central\n\tfound org.mongodb#mongodb-driver-sync;4.0.5 in central\n\tfound org.mongodb#bson;4.0.5 in central\n\tfound org.mongodb#mongodb-driver-core;4.0.5 in central\ndownloading https://repo1.maven.org/maven2/org/postgresql/postgresql/42.7.3/postgresql-42.7.3.jar ...\n\t[SUCCESSFUL ] org.postgresql#postgresql;42.7.3!postgresql.jar (135ms)\ndownloading https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-aws/3.3.4/hadoop-aws-3.3.4.jar ...\n\t[SUCCESSFUL ] org.apache.hadoop#hadoop-aws;3.3.4!hadoop-aws.jar (107ms)\ndownloading https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk-bundle/1.12.540/aws-java-sdk-bundle-1.12.540.jar ...\n\t[SUCCESSFUL ] com.amazonaws#aws-java-sdk-bundle;1.12.540!aws-java-sdk-bundle.jar (24819ms)\ndownloading https://repo1.maven.org/maven2/org/mongodb/spark/mongo-spark-connector_2.12/3.0.1/mongo-spark-connector_2.12-3.0.1.jar ...\n\t[SUCCESSFUL ] org.mongodb.spark#mongo-spark-connector_2.12;3.0.1!mongo-spark-connector_2.12.jar (76ms)\ndownloading https://repo1.maven.org/maven2/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar ...\n\t[SUCCESSFUL ] org.checkerframework#checker-qual;3.42.0!checker-qual.jar (49ms)\ndownloading https://repo1.maven.org/maven2/org/wildfly/openssl/wildfly-openssl/1.0.7.Final/wildfly-openssl-1.0.7.Final.jar ...\n\t[SUCCESSFUL ] org.wildfly.openssl#wildfly-openssl;1.0.7.Final!wildfly-openssl.jar (65ms)\ndownloading https://repo1.maven.org/maven2/org/mongodb/mongodb-driver-sync/4.0.5/mongodb-driver-sync-4.0.5.jar ...\n\t[SUCCESSFUL ] org.mongodb#mongodb-driver-sync;4.0.5!mongodb-driver-sync.jar (45ms)\ndownloading https://repo1.maven.org/maven2/org/mongodb/bson/4.0.5/bson-4.0.5.jar ...\n\t[SUCCESSFUL ] org.mongodb#bson;4.0.5!bson.jar (74ms)\ndownloading https://repo1.maven.org/maven2/org/mongodb/mongodb-driver-core/4.0.5/mongodb-driver-core-4.0.5.jar ...\n\t[SUCCESSFUL ] org.mongodb#mongodb-driver-core;4.0.5!mongodb-driver-core.jar (140ms)\n:: resolution report :: resolve 5609ms :: artifacts dl 25528ms\n\t:: modules in use:\n\tcom.amazonaws#aws-java-sdk-bundle;1.12.540 from central in [default]\n\torg.apache.hadoop#hadoop-aws;3.3.4 from central in [default]\n\torg.checkerframework#checker-qual;3.42.0 from central in [default]\n\torg.mongodb#bson;4.0.5 from central in [default]\n\torg.mongodb#mongodb-driver-core;4.0.5 from central in [default]\n\torg.mongodb#mongodb-driver-sync;4.0.5 from central in [default]\n\torg.mongodb.spark#mongo-spark-connector_2.12;3.0.1 from central in [default]\n\torg.postgresql#postgresql;42.7.3 from central in [default]\n\torg.wildfly.openssl#wildfly-openssl;1.0.7.Final from central in [default]\n\t:: evicted modules:\n\tcom.amazonaws#aws-java-sdk-bundle;1.12.262 by [com.amazonaws#aws-java-sdk-bundle;1.12.540] in [default]\n\t---------------------------------------------------------------------\n\t|                  |            modules            ||   artifacts   |\n\t|       conf       | number| search|dwnlded|evicted|| number|dwnlded|\n\t---------------------------------------------------------------------\n\t|      default     |   10  |   9   |   9   |   1   ||   9   |   9   |\n\t---------------------------------------------------------------------\n:: retrieving :: org.apache.spark#spark-submit-parent-f73ca8af-bd06-475b-b86f-42d428373af6\n\tconfs: [default]\n\t9 artifacts copied, 0 already retrieved (337379kB/987ms)\n26/02/25 12:23:55 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable\nSetting default log level to \"WARN\".\nTo adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).\n",
           "mimetype": "text/plain"
         }
       ]
@@ -161,21 +44,15 @@
       "console": [
         {
           "type": "stream",
-          "name": "stderr",
-          "text": "26/02/24 13:44:56 WARN GarbageCollectionMetrics: To enable non-built-in garbage collector(s) List(G1 Concurrent GC), users should configure it(them) to spark.eventLog.gcMetrics.youngGenerationGarbageCollectors or spark.eventLog.gcMetrics.oldGenerationGarbageCollectors\n\r[Stage 0:>                                                          (0 + 1) / 1]\r\r                                                                                \r",
-          "mimetype": "text/plain"
-        },
-        {
-          "type": "stream",
           "name": "stdout",
-          "text": "+--------+-----------+-------+------------+\n|order_id|customer_id| status|total_amount|\n+--------+-----------+-------+------------+\n|       1|         94|shipped|       97.88|\n|       2|         32|   paid|      641.60|\n|       3|         88|   paid|      775.60|\n|       4|         90|   paid|     2364.85|\n|       5|          8|shipped|     1598.64|\n+--------+-----------+-------+------------+\nonly showing top 5 rows\n\n",
+          "text": "+--------+-----------+-------+------------+\n|order_id|customer_id| status|total_amount|\n+--------+-----------+-------+------------+\n|       1|         13|shipped|      566.30|\n|       2|         43|   paid|     1411.08|\n|       3|          1|   paid|      874.68|\n|       4|         28|   paid|      245.00|\n|       5|         93|shipped|     1052.96|\n+--------+-----------+-------+------------+\nonly showing top 5 rows\n\n",
           "mimetype": "text/plain"
         }
       ]
     },
     {
       "id": "vblA",
-      "code_hash": "643b23b4e08f68e4543efd45b025ff08",
+      "code_hash": "c045b25d1fb0fe8fc9c65139a98ea961",
       "outputs": [
         {
           "type": "data",
@@ -188,7 +65,7 @@
         {
           "type": "stream",
           "name": "stderr",
-          "text": "26/02/24 13:45:05 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties\n\r[Stage 1:>                                                          (0 + 1) / 1]\r\r                                                                                \r",
+          "text": "26/02/25 12:24:09 WARN MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties\n\r[Stage 1:>                                                          (0 + 1) / 1]\r\r                                                                                \r",
           "mimetype": "text/plain"
         }
       ]
@@ -200,7 +77,7 @@
         {
           "type": "data",
           "data": {
-            "text/html": "<marimo-ui-element object-id='bkHC-0' random-id='64f1c25a-11ed-d424-e29d-2034cd1a1a5b'><marimo-table data-initial-value='[]' data-label='null' data-data='[]' data-total-rows='&quot;too_many&quot;' data-total-columns='0' data-max-columns='50' data-banner-text='&quot;Previewing only the first 10 rows.&quot;' data-pagination='false' data-page-size='10' data-show-filters='true' data-show-download='false' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='true' data-preload='false' data-download-file-name='&quot;data&quot;'></marimo-table></marimo-ui-element>"
+            "text/html": "<marimo-ui-element object-id='bkHC-0' random-id='a4c861f1-4e93-8413-23f2-e307c052e824'><marimo-table data-initial-value='[]' data-label='null' data-data='[]' data-total-rows='&quot;too_many&quot;' data-total-columns='0' data-max-columns='50' data-banner-text='&quot;Previewing only the first 10 rows.&quot;' data-pagination='false' data-page-size='10' data-show-filters='true' data-show-download='false' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='true' data-preload='false' data-download-file-name='&quot;data&quot;'></marimo-table></marimo-ui-element>"
           }
         }
       ],
@@ -214,13 +91,13 @@
         {
           "type": "stream",
           "name": "stderr",
-          "text": "\r[Stage 2:>                                                          (0 + 1) / 1]\r\r                                                                                \r",
+          "text": "26/02/25 12:24:13 WARN GarbageCollectionMetrics: To enable non-built-in garbage collector(s) List(G1 Concurrent GC), users should configure it(them) to spark.eventLog.gcMetrics.youngGenerationGarbageCollectors or spark.eventLog.gcMetrics.oldGenerationGarbageCollectors\n\r[Stage 2:>                                                          (0 + 1) / 1]\r\r                                                                                \r",
           "mimetype": "text/plain"
         },
         {
           "type": "stream",
           "name": "stdout",
-          "text": "+--------------------+-------+-----------+----------+-------+\n|                 _id| device| event_type|product_id|user_id|\n+--------------------+-------+-----------+----------+-------+\n|699d99ead7b1dde7b...| mobile|add_to_cart|        15|     20|\n|699d99ead7b1dde7b...|desktop|   checkout|        14|     91|\n|699d99ead7b1dde7b...| mobile|       view|        16|     62|\n|699d99ead7b1dde7b...|desktop|add_to_cart|        37|     58|\n|699d99ead7b1dde7b...| mobile|       view|        27|     90|\n+--------------------+-------+-----------+----------+-------+\nonly showing top 5 rows\n\n",
+          "text": "+--------------------+-------+-----------+----------+-------+\n|                 _id| device| event_type|product_id|user_id|\n+--------------------+-------+-----------+----------+-------+\n|699ee92ee004292ee...|desktop|       view|        17|      9|\n|699ee92ee004292ee...| mobile|   checkout|        40|     94|\n|699ee92ee004292ee...|desktop|       view|        39|      5|\n|699ee92ee004292ee...| mobile|       view|         1|     57|\n|699ee92ee004292ee...| mobile|add_to_cart|         8|     49|\n+--------------------+-------+-----------+----------+-------+\nonly showing top 5 rows\n\n",
           "mimetype": "text/plain"
         }
       ]
@@ -240,7 +117,7 @@
         {
           "type": "stream",
           "name": "stderr",
-          "text": "\r[Stage 3:>                                                        (0 + 12) / 12]\r\r[Stage 3:====>                                                    (1 + 11) / 12]\r\r[Stage 3:===================>                                      (4 + 8) / 12]\r\r[Stage 3:======================================>                   (8 + 4) / 12]\r\r                                                                                \r",
+          "text": "\r[Stage 3:>                                                        (0 + 12) / 12]\r\r[Stage 3:======================================>                   (8 + 4) / 12]\r\r                                                                                \r",
           "mimetype": "text/plain"
         }
       ]
@@ -260,7 +137,7 @@
         {
           "type": "stream",
           "name": "stderr",
-          "text": "\r[Stage 5:>                                                        (0 + 12) / 12]\r\r[Stage 5:====>                                                    (1 + 11) / 12]\r\r[Stage 5:========================>                                 (5 + 7) / 12]\r\r                                                                                \r",
+          "text": "\r[Stage 5:>                                                        (0 + 12) / 12]\r\r[Stage 5:====>                                                    (1 + 11) / 12]\r\r[Stage 5:==============>                                           (3 + 9) / 12]\r\r                                                                                \r",
           "mimetype": "text/plain"
         },
         {
@@ -286,7 +163,7 @@
         {
           "type": "stream",
           "name": "stderr",
-          "text": "26/02/24 13:45:38 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 95.00% for 8 writers\n26/02/24 13:45:38 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 84.44% for 9 writers\n26/02/24 13:45:38 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 76.00% for 10 writers\n26/02/24 13:45:38 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 69.09% for 11 writers\n26/02/24 13:45:38 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 63.33% for 12 writers\n\r[Stage 7:>                                                        (0 + 12) / 12]\r26/02/24 13:45:38 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 69.09% for 11 writers\n\r[Stage 7:====>                                                    (1 + 11) / 12]\r26/02/24 13:45:40 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 76.00% for 10 writers\n26/02/24 13:45:40 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 84.44% for 9 writers\n26/02/24 13:45:40 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 95.00% for 8 writers\n\r[Stage 7:===================>                                      (4 + 8) / 12]\r\r[Stage 7:====================================================>    (11 + 1) / 12]\r\r                                                                                \r",
+          "text": "26/02/25 12:24:21 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 95.00% for 8 writers\n26/02/25 12:24:21 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 84.44% for 9 writers\n26/02/25 12:24:21 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 76.00% for 10 writers\n26/02/25 12:24:21 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 69.09% for 11 writers\n26/02/25 12:24:21 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 63.33% for 12 writers\n\r[Stage 7:>                                                        (0 + 12) / 12]\r26/02/25 12:24:22 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 69.09% for 11 writers\n\r[Stage 7:====>                                                    (1 + 11) / 12]\r26/02/25 12:24:23 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 76.00% for 10 writers\n26/02/25 12:24:23 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 84.44% for 9 writers\n26/02/25 12:24:23 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 95.00% for 8 writers\n\r[Stage 7:==============>                                           (3 + 9) / 12]\r\r[Stage 7:====================================================>    (11 + 1) / 12]\r\r                                                                                \r",
           "mimetype": "text/plain"
         }
       ]
@@ -303,12 +180,6 @@
         }
       ],
       "console": [
-        {
-          "type": "stream",
-          "name": "stderr",
-          "text": "\r[Stage 9:============================================>              (3 + 1) / 4]\r\r                                                                                \r\r[Stage 10:=========================================>                (5 + 2) / 7]\r\r                                                                                \r",
-          "mimetype": "text/plain"
-        },
         {
           "type": "stream",
           "name": "stdout",
@@ -328,14 +199,20 @@
           }
         }
       ],
-      "console": [
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "8bb44c7f817ccab1ca6fb6fd377a08e2",
+      "outputs": [
         {
-          "type": "stream",
-          "name": "stderr",
-          "text": "\r[Stage 11:====>                                                   (1 + 11) / 12]\r\r[Stage 11:==============>                                          (3 + 9) / 12]\r\r[Stage 11:===================================================>    (11 + 1) / 12]\r\r                                                                                \r",
-          "mimetype": "text/plain"
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"silver-orders-postgresql\">Silver \u2013 Orders (PostgreSQL)</h3></span>"
+          }
         }
-      ]
+      ],
+      "console": []
     },
     {
       "id": "Kclp",
@@ -345,6 +222,19 @@
           "type": "data",
           "data": {
             "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "emfo",
+      "code_hash": "58227dcee15367b20c3464351e7dbc28",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"silver-events-mongodb\">Silver \u2013 Events (MongoDB)</h3></span>"
           }
         }
       ],
@@ -365,10 +255,23 @@
         {
           "type": "stream",
           "name": "stderr",
-          "text": "26/02/24 13:51:30 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 95.00% for 8 writers\n26/02/24 13:51:30 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 84.44% for 9 writers\n26/02/24 13:51:30 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 76.00% for 10 writers\n26/02/24 13:51:30 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 69.09% for 11 writers\n26/02/24 13:51:30 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 63.33% for 12 writers\n26/02/24 13:51:30 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 69.09% for 11 writers\n26/02/24 13:51:30 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 76.00% for 10 writers\n26/02/24 13:51:30 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 84.44% for 9 writers\n26/02/24 13:51:30 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 95.00% for 8 writers\n\r[Stage 15:>                                                       (0 + 12) / 12]\r\r                                                                                \r",
+          "text": "26/02/25 12:24:29 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 95.00% for 8 writers\n26/02/25 12:24:29 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 84.44% for 9 writers\n26/02/25 12:24:29 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 76.00% for 10 writers\n26/02/25 12:24:29 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 69.09% for 11 writers\n26/02/25 12:24:29 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 63.33% for 12 writers\n26/02/25 12:24:29 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 69.09% for 11 writers\n26/02/25 12:24:29 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 76.00% for 10 writers\n26/02/25 12:24:29 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 84.44% for 9 writers\n26/02/25 12:24:29 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 95.00% for 8 writers\n\r[Stage 15:======================================>                  (8 + 4) / 12]\r\r                                                                                \r",
           "mimetype": "text/plain"
         }
       ]
+    },
+    {
+      "id": "nWHF",
+      "code_hash": "52ad23edd4b757e0c81619e568b7d551",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"silver-exchange-rates-api\">Silver \u2013 Exchange Rates (API)</h3></span>"
+          }
+        }
+      ],
+      "console": []
     },
     {
       "id": "iLit",
@@ -384,73 +287,186 @@
       "console": []
     },
     {
-      "id": "ROlb",
-      "code_hash": "d92d1c7017312a82a13009a943e6defe",
+      "id": "ZHCJ",
+      "code_hash": "fee7cc1de28ba5fa7ab2d560e0408945",
       "outputs": [
         {
-          "type": "error",
-          "ename": "exception",
-          "evalue": "[UNRESOLVED_COLUMN.WITH_SUGGESTION] A column or function parameter with name `order_id` cannot be resolved. Did you mean one of the following? [`Country`, `Quantity`, `CustomerID`, `InvoiceNo`, `StockCode`].;\n'Project [InvoiceNo#242, StockCode#243, Description#244, Quantity#245, InvoiceDate#246, UnitPrice#247, CustomerID#248, Country#249, cast('order_id as int) AS order_id#258]\n+- Relation [InvoiceNo#242,StockCode#243,Description#244,Quantity#245,InvoiceDate#246,UnitPrice#247,CustomerID#248,Country#249] parquet\n",
-          "traceback": []
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"silver-files-csv-ventes\">SILVER \u2013 FILES (CSV ventes)</h3></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ROlb",
+      "code_hash": "3833abaebcc0f361708ddd8b1afae3b3",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
         }
       ],
       "console": [
         {
           "type": "stream",
           "name": "stderr",
-          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">&quot;/tmp/marimo_1195/__marimo__cell_ROlb_.py&quot;</span>, line <span class=\"m\">6</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"o\">.</span><span class=\"n\">withColumn</span><span class=\"p\">(</span><span class=\"s2\">&quot;order_id&quot;</span><span class=\"p\">,</span> <span class=\"n\">col</span><span class=\"p\">(</span><span class=\"s2\">&quot;order_id&quot;</span><span class=\"p\">)</span><span class=\"o\">.</span><span class=\"n\">cast</span><span class=\"p\">(</span><span class=\"s2\">&quot;int&quot;</span><span class=\"p\">))</span> \\\n<span class=\"w\">     </span><span class=\"pm\">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/usr/local/lib/python3.11/site-packages/pyspark/sql/dataframe.py&quot;</span>, line <span class=\"m\">5170</span>, in <span class=\"n\">withColumn</span>\n<span class=\"w\">    </span><span class=\"k\">return</span> <span class=\"n\">DataFrame</span><span class=\"p\">(</span><span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">_jdf</span><span class=\"o\">.</span><span class=\"n\">withColumn</span><span class=\"p\">(</span><span class=\"n\">colName</span><span class=\"p\">,</span> <span class=\"n\">col</span><span class=\"o\">.</span><span class=\"n\">_jc</span><span class=\"p\">),</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">sparkSession</span><span class=\"p\">)</span>\n<span class=\"w\">                     </span><span class=\"pm\">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/usr/local/lib/python3.11/site-packages/py4j/java_gateway.py&quot;</span>, line <span class=\"m\">1322</span>, in <span class=\"n\">__call__</span>\n<span class=\"w\">    </span><span class=\"n\">return_value</span> <span class=\"o\">=</span> <span class=\"n\">get_return_value</span><span class=\"p\">(</span>\n<span class=\"w\">                   </span><span class=\"pm\">^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;/usr/local/lib/python3.11/site-packages/pyspark/errors/exceptions/captured.py&quot;</span>, line <span class=\"m\">185</span>, in <span class=\"n\">deco</span>\n<span class=\"w\">    </span><span class=\"k\">raise</span> <span class=\"n\">converted</span> <span class=\"kn\">from</span><span class=\"w\"> </span><span class=\"kc\">None</span>\n<span class=\"gr\">pyspark.errors.exceptions.captured.AnalysisException</span>: <span class=\"n\">[UNRESOLVED_COLUMN.WITH_SUGGESTION] A column or function parameter with name `order_id` cannot be resolved. Did you mean one of the following? [`Country`, `Quantity`, `CustomerID`, `InvoiceNo`, `StockCode`].;</span>\n<span class=\"x\">&#39;Project [InvoiceNo#242, StockCode#243, Description#244, Quantity#245, InvoiceDate#246, UnitPrice#247, CustomerID#248, Country#249, cast(&#39;order_id as int) AS order_id#258]</span>\n<span class=\"x\">+- Relation [InvoiceNo#242,StockCode#243,Description#244,Quantity#245,InvoiceDate#246,UnitPrice#247,CustomerID#248,Country#249] parquet</span>\n</pre></div>\n</span>",
-          "mimetype": "application/vnd.marimo+traceback"
+          "text": "26/02/25 12:24:31 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 95.00% for 8 writers\n26/02/25 12:24:31 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 84.44% for 9 writers\n26/02/25 12:24:31 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 76.00% for 10 writers\n26/02/25 12:24:32 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 69.09% for 11 writers\n26/02/25 12:24:32 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 63.33% for 12 writers\n26/02/25 12:24:32 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 69.09% for 11 writers\n\r[Stage 19:>                                                       (0 + 12) / 12]\r\r[Stage 19:====>                                                   (1 + 11) / 12]\r26/02/25 12:24:32 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 76.00% for 10 writers\n26/02/25 12:24:32 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 84.44% for 9 writers\n26/02/25 12:24:32 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory\nScaling row group sizes to 95.00% for 8 writers\n\r[Stage 19:=================================>                       (7 + 5) / 12]\r\r                                                                                \r",
+          "mimetype": "text/plain"
         }
       ]
+    },
+    {
+      "id": "qnkX",
+      "code_hash": "acb56133f26205d1cd6b4ee734177121",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"gold-chiffre-daffaires-par-statut\">Gold \u2013 Chiffre d\u2019affaires par statut</h3></span>"
+          }
+        }
+      ],
+      "console": []
     },
     {
       "id": "TqIu",
-      "code_hash": "cdd8805b617d56ba76c408a8eb6b842c",
+      "code_hash": "22ad55534890856bb272700075bb8c87",
       "outputs": [
         {
-          "type": "error",
-          "ename": "exception",
-          "evalue": "name '_sum' is not defined",
-          "traceback": []
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
         }
       ],
-      "console": [
+      "console": []
+    },
+    {
+      "id": "Vxnm",
+      "code_hash": "6f7bde4b4b28d6f378276b8866f9221a",
+      "outputs": [
         {
-          "type": "stream",
-          "name": "stderr",
-          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">&quot;/tmp/marimo_1195/__marimo__cell_TqIu_.py&quot;</span>, line <span class=\"m\">7</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"o\">.</span><span class=\"n\">agg</span><span class=\"p\">(</span><span class=\"n\">_sum</span><span class=\"p\">(</span><span class=\"s2\">&quot;amount&quot;</span><span class=\"p\">)</span><span class=\"o\">.</span><span class=\"n\">alias</span><span class=\"p\">(</span><span class=\"s2\">&quot;total_</span><span class=\"si\">%r</span><span class=\"s2\">evenue&quot;</span><span class=\"p\">))</span>\n<span class=\"w\">         </span><span class=\"pm\">^^^^</span>\n<span class=\"gr\">NameError</span>: <span class=\"n\">name &#39;_sum&#39; is not defined</span>\n</pre></div>\n</span>",
-          "mimetype": "application/vnd.marimo+traceback"
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"gold-top-clients\">Gold \u2013 Top clients</h3></span>"
+          }
         }
-      ]
+      ],
+      "console": []
     },
     {
       "id": "DnEU",
-      "code_hash": "17c1391ec820eba7b61d2e9027968b1f",
-      "outputs": [],
+      "code_hash": "f4223449ac5489a1503de4b26b31d721",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ulZA",
+      "code_hash": "a095ef69006c404b49bbcc8736e0bcd2",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"gold-events-par-type\">Gold \u2013 Events par type</h3></span>"
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "ecfG",
       "code_hash": "60ced47d519e4b81ef46bee9f8bfc2c6",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Pvdt",
+      "code_hash": "2424ac3bd62dfa2dd06f4481b50a8d4c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"gold-chiffre-daffaires-issu-des-fichiers\">Gold \u2013 Chiffre d\u2019affaires issu des fichiers</h3></span>"
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "ZBYS",
-      "code_hash": "b5bc874bc02b6022d6cb61bad41d3c74",
-      "outputs": [],
+      "code_hash": "4b3793b413c11b2a2d9ae1a93b4e3bfc",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "aLJB",
+      "code_hash": "5dec4dc929403d4b771f73dbc36066da",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"gold-top-clients-fichiers\">Gold \u2013 Top clients (fichiers)</h3></span>"
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "nHfw",
-      "code_hash": "a6a6825d02f530ee6abb1797ad6113eb",
-      "outputs": [],
-      "console": []
+      "code_hash": "dea413a68628d730ae2cf202ea15326e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "\r[Stage 43:====>                                                   (1 + 11) / 12]\r\r                                                                                \r",
+          "mimetype": "text/plain"
+        }
+      ]
     },
     {
       "id": "xXTn",
       "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     }
   ]
